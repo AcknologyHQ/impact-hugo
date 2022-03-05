@@ -1,9 +1,9 @@
 <section class="section-about section container" id="{{ replace (lower .Site.Data.home.about.title) " " "-" }}">
     <div class="columns is-vcentered">
         <div class="column image-container has-text-centered">
-            <img src="{{ .Site.Data.home.about.image | relURL }}" alt="" class="has-rounded-border" data-aos="fade-left" data-aos-once="true">
+            <img src="{{ .Site.Data.home.about.image | relURL }}" alt="" class="has-rounded-border"  {{ if .Site.Params.EnableAOS }} data-aos="fade-left" data-aos-once="true" {{ end }}>
         </div>
-        <div class="column" data-aos="fade-right" data-aos-once="true">
+        <div class="column"  {{ if .Site.Params.EnableAOS }} data-aos="fade-right" data-aos-once="true" {{ end }}>
             <h2 class="title is-size-2 is-size-3-mobile">
                 {{ .Site.Data.home.about.title }}
             </h2>

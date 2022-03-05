@@ -1,5 +1,5 @@
 <section class="section-clients section container" id="{{ replace (lower .Site.Data.home.clients.title) " " "-" }}">
-    <div class=" has-text-centered" data-aos="fade-up" data-aos-once="true">
+    <div class=" has-text-centered"  {{ if .Site.Params.EnableAOS }} data-aos="fade-up" data-aos-once="true" {{ end }}>
         <div class="is-size-2 is-size-3-mobile has-text-grey-dark has-text-weight-semibold">
             {{ if .Site.Data.home.clients.title }}
             {{ .Site.Data.home.clients.title }}
@@ -13,7 +13,7 @@
     </div>
 
     <div class="mt-5">
-        <div id="carousel-clients" class="carousel" data-aos="fade-down" data-aos-once="true">
+        <div id="carousel-clients" class="carousel"  {{ if .Site.Params.EnableAOS }} data-aos="fade-down" data-aos-once="true" {{ end }}>
             <!-- Start Carousel -->
             {{ $items := .Site.Data.home.clients.list }}
             {{ $len := sub ($items | len) 1 }}

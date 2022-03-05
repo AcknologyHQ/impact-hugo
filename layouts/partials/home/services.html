@@ -1,5 +1,5 @@
 <section class="section-services section container" id="{{ replace (lower .Site.Data.home.services.title) " " "-" }}">
-    <div class=" has-text-centered" data-aos="fade-up">
+    <div class=" has-text-centered"  {{ if .Site.Params.EnableAOS }} data-aos="fade-up" {{ end }}>
         <div class="is-size-2 is-size-3-mobile has-text-grey-dark has-text-weight-semibold">
             {{ if .Site.Data.home.services.title }}
             {{ .Site.Data.home.services.title }}
@@ -15,7 +15,7 @@
     <div class="mt-6">
         <div class="columns">
             <div class="column has-text-centered">
-                <img data-aos="fade-left" src="{{ .Site.Data.home.services.image | relURL }}" alt="" class="has-rounded-border">
+                <img  {{ if .Site.Params.EnableAOS }} data-aos="fade-left" {{ end }} src="{{ .Site.Data.home.services.image | relURL }}" alt="" class="has-rounded-border">
                 <div class="image-container">
                 </div>
             </div>
@@ -23,6 +23,7 @@
 
                 {{ $items := .Site.Data.home.services.items }}
                 {{ $len := sub ($items | len) 1 }}
+                {{ $enableAOS := .Site.Params.EnableAOS }}
 
                 {{ range $j, $Seq := (seq 2) }}
 
@@ -45,7 +46,7 @@
                         {{ end }}
 
                         <div class="column {{ if eq $j 0 }}is-half{{ else }}is-one-third{{ end }}">
-                            <div class="box" data-aos="fade-up" data-aos-delay="{{ math.Min (mul $i 100) 500 }}">
+                            <div class="box"  {{ if $enableAOS }} data-aos="fade-up" data-aos-delay="{{ math.Min (mul $i 100) 500 }}" {{ end }}>
                                 <div class="has-text-primary my-5">
                                     <i class="fa {{ $item.icon }} fa-3x" aria-hidden="true"></i>
                                 </div>

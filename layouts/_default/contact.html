@@ -2,7 +2,7 @@
 
 <div class="container has-text-centered my-6 py-5 is-unselectable ">
     <div class="columns is-8 is-variable">
-        <div class="column is-two-thirds has-text-left" data-aos="fade-left" data-aos-once="true">
+        <div class="column is-two-thirds has-text-left" {{ if .Site.Params.EnableAOS }} data-aos="fade-left" data-aos-once="true" {{ end }}>
             <h1 class="title is-1">Contact Us</h1>
 
             <div class="my-2 pb-5">
@@ -39,7 +39,7 @@
             </div>
 
         </div>
-        <div class="column is-one-third has-text-left" data-aos="fade-right" data-aos-once="true">
+        <div class="column is-one-third has-text-left"  {{ if .Site.Params.EnableAOS }} data-aos="fade-right" data-aos-once="true" {{ end }}>
             <div class="field">
                 <label class="label">Name</label>
                 <div class="control">

@@ -49,6 +49,12 @@
 {{- partial "imports/preconnect.html" -}}
 {{- partial "imports/styles.html" -}}
 
+{{/*  Optional Imports  */}}
+{{ if .Site.Params.EnableAOS }}
+{{ "<!-- AnimateOnScroll | AoS -->" | safeHTML }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.x/dist/aos.min.css">
+{{ end }}
+
 
 <!-- head extra -->
 {{- partial "extend/head.html" -}}

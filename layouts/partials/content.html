@@ -1,7 +1,7 @@
 <!-- main content -->
 <section class="section container py-5 px-4 has-navbar-fixed-top" id="main">
 
-    <div class="columns" data-aos="fade-down" data-aos-once="true">
+    <div class="columns"  {{ if .Site.Params.EnableAOS }} data-aos="fade-down" data-aos-once="true" {{ end }}>
         <!-- Show BreadCrumbs -->
         {{ if (and (not .IsHome ) ( ne false (default .Site.Params.breadCrumbs .Params.breadCrumbs)) ) }}
         <div class="column">
@@ -22,7 +22,7 @@
     <div class="py-6 px-4 {{ if .Params.isJustified }} has-text-justified {{ end }}" id="main-contnet">
 
         {{ if .Title }}
-        <div class="{{ if .Params.addTitleBackground }}has-background-link-light{{ end }} py-5 has-rounded-border" style="" data-aos="zoom-in" data-aos-once="true">        
+        <div class="{{ if .Params.addTitleBackground }}has-background-link-light{{ end }} py-5 has-rounded-border" style=""  {{ if .Site.Params.EnableAOS }} data-aos="zoom-in" data-aos-once="true" {{ end }}>        
             {{ if .Params.image }}
                 <div class="has-text-centered mb-4">
                     <img style="max-width: {{ if .Params.imageWidth }}{{ .Params.imageWidth }}{{ else }}300px{{ end }};" class="" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
@@ -35,7 +35,7 @@
         </div>
         {{ end }}
 
-            <div class="content mt-6" data-aos="fade-down" data-aos-once="true">
+            <div class="content mt-6"  {{ if .Site.Params.EnableAOS }} data-aos="fade-down" data-aos-once="true" {{ end }}>
                 {{ .Content  | safeHTML }}
             </div>
         </div>

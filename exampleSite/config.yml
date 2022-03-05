@@ -54,6 +54,9 @@ params:
   # description: "Impact"
   # keywords: "Impact"
   author: Acknology Co.
+
+  # [Optional] enable AnimateOnScroll [true|false]
+  enableAOS: true
   
   # [Optional] Custom footer text
   footer:

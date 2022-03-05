@@ -4,8 +4,11 @@
 {{ "<!-- AlpineJS -->" | safeHTML }}
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js"></script>
 
+{{ $enableAOS := .Site.Params.EnableAOS }}
+{{ if $enableAOS }}
 {{ "<!-- AnimateOnScroll | AoS -->" | safeHTML }}
 <script src="https://cdn.jsdelivr.net/npm/aos@2.x/dist/aos.min.js"></script>
+{{ end }}
 
 {{/*  Highlight JS  */}}
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script>
