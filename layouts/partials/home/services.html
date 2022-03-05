@@ -1,5 +1,5 @@
 <section class="section-services section container" id="{{ replace (lower .Site.Data.home.services.title) " " "-" }}">
-    <div class=" has-text-centered">
+    <div class=" has-text-centered" data-aos="fade-up">
         <div class="is-size-2 is-size-3-mobile has-text-grey-dark has-text-weight-semibold">
             {{ if .Site.Data.home.services.title }}
             {{ .Site.Data.home.services.title }}
@@ -15,7 +15,7 @@
     <div class="mt-6">
         <div class="columns">
             <div class="column has-text-centered">
-                <img src="{{ .Site.Data.home.services.image | relURL }}" alt="" class="has-rounded-border">
+                <img data-aos="fade-left" src="{{ .Site.Data.home.services.image | relURL }}" alt="" class="has-rounded-border">
                 <div class="image-container">
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         {{ end }}
 
                         <div class="column {{ if eq $j 0 }}is-half{{ else }}is-one-third{{ end }}">
-                            <div class="box">
+                            <div class="box" data-aos="fade-up" data-aos-delay="{{ math.Min (mul $i 100) 500 }}">
                                 <div class="has-text-primary my-5">
                                     <i class="fa {{ $item.icon }} fa-3x" aria-hidden="true"></i>
                                 </div>

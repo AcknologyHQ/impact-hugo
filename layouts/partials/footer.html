@@ -3,7 +3,7 @@
 <footer class="is-unselectable footer has-text-centered has-text-left-tablet">
     <div class="container">
         <div class=" mb-5-tablet">
-            <div class="columns">
+            <div class="columns" data-aos="fade-up" data-aos-once="true">
                 <div class="column is-one-third-desktop has-text-centered has-text-left-tablet">
                     <img alt="icon" class="image is-64x64 mb-3" src="{{ .Site.Params.icon | relURL }}">
                     <a class="is-size-4 has-text-black mt-4" href="{{ .Site.BaseURL | relURL }}">
@@ -29,10 +29,10 @@
             </div>
         </div>
 
-        <hr class="my-6">
+        <hr class="my-6" data-aos="fade-in" data-aos-once="true">
 
         <!-- Copyright & PoweredBy -->
-        <div class="columns copyright-poweredby">
+        <div class="columns copyright-poweredby" data-aos="fade-in" data-aos-once="true">
 
             <!-- extra -->
             <div class="extra column is-size-7 columns mt-2">
@@ -89,7 +89,7 @@
 
         {{ if (and (.Site.Params.HidePoweredBy) (.Site.Params.HideMadeWith)) }}
         {{ else }}
-        <div class="mt-6 has-text-centered is-size-7">
+        <div class="mt-6 has-text-centered is-size-7" data-aos="fade-down" data-aos-once="true">
             <!-- PoweredBy -->
             {{ if (not (.Site.Params.HidePoweredBy)) }}
             <div class="mt-4">
