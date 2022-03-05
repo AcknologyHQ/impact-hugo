@@ -1,6 +1,8 @@
 (() => {
   // <stdin>
-  AOS.init();
+  AOS.init({
+    delay: 100
+  });
   var backtotop = document.querySelector("#backtotop");
   backtotop.addEventListener("click", (e) => {
     e.preventDefault();
