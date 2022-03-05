@@ -1,12 +1,14 @@
 // ########
 // ### AnimateOnScroll - AoS : Initilize
 // ########
-AOS.init({
-  // Global settings:
-  delay: 100, // values from 0 to 3000, with step 50ms
-  // once: true, // whether animation should happen only once - while scrolling down
-});
-
+if(typeof AOS !== 'undefined') {
+  AOS.init({
+    // Global settings:
+    delay: 100, // values from 0 to 3000, with step 50ms
+    // once: true, // whether animation should happen only once - while scrolling down
+  });
+}
+  
 // ########
 // ### Scroll to top
 // ########
@@ -19,7 +21,6 @@ backtotop.addEventListener("click", (e) => {
 // ########
 // ### Navbar Burger
 // ########
-
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(
@@ -44,20 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-bulmaCarousel.attach('#carousel-clients', {
-  slidesToScroll: 1,
-  slidesToShow: 6,
-  loop: true,
-  autoplay: true,
-  duration: 2000,
-  autoplaySpeed: 1000,
-  infinite: true,
-  navigation: false,
-  pagination: false,
-  navigationKeys: false,
-  // pauseOnHover: false,
-  timing: 'ease-in-out',
-});
+// ########
+// ### Bulma Carousel
+// ########
+if(typeof bulmaCarousel !== 'undefined') {
+  bulmaCarousel.attach('#carousel-clients', {
+    slidesToScroll: 1,
+    slidesToShow: 6,
+    loop: true,
+    autoplay: true,
+    duration: 2000,
+    autoplaySpeed: 1000,
+    infinite: true,
+    navigation: false,
+    pagination: false,
+    navigationKeys: false,
+    // pauseOnHover: false,
+    timing: 'ease-in-out',
+  });
+}
 
-// HighlightJS
-hljs.highlightAll();
+// ########
+// ### Highlight.js
+// ########
+if(typeof hljs !== 'undefined') {
+  hljs.highlightAll();
+}
