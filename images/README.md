@@ -1,4 +1,10 @@
-for screenshot and thumbnail
+images for themes list
+
+`icon.png`
+
+<img src="https://raw.githubusercontent.com/AcknologyHQ/impact-hugo/main/images/icon.png" height="100">
+
+<br>
 
 `screenshot.png`
 
