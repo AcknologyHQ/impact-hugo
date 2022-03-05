@@ -24,7 +24,7 @@ This is a simple and minimalistic UI theme for [hugo](https://gohugo.io/) made w
 
 **Demo**
 
-check out the [**DEMO**](https://acknologyhq.github.io/impact-hugo/)
+check out the 👉 [**LIVE DEMO**](https://acknologyhq.github.io/impact-hugo/)
 
 <br>
 
@@ -40,9 +40,13 @@ $ git submodule add https://github.com/AcknologyHQ/impact-hugo.git themes/impact
 
 **Example Config**
 
-yaml is used here insted of toml feel free to check `config.toml` for toml example
+Check out the **[config.yml](https://github.com/AcknologyHQ/impact-hugo/blob/main/.example/config.yml) or [config.toml](https://github.com/AcknologyHQ/impact-hugo/blob/main/.example/config.toml)** file to see how to configure your site using this theme
 
 ```yaml
+####
+## Sample Config for Impact Theme
+####
+
 baseURL: "http://example.org"
 languageCode: en-us
 title: WEBSITE_TITLE
@@ -59,7 +63,7 @@ disableKinds:
     - taxonomy
     - term
 
-# disableHugoGeneratorInject: "true"
+disableHugoGeneratorInject: "true"
 
 minify:
     minifyOutput: "true"
@@ -78,7 +82,7 @@ minify:
 ## Theme Options
 ####
 
-googleAnalytics: "UA-XXXXX-X"
+googleAnalytics: UA-XXXXX-X
 enableRobotsTXT: "true"
 
 params:
@@ -95,13 +99,8 @@ params:
     footer:
         title: Impact Theme
         subtitle: A powerful theme for impactful websites
-
-    # if you want to use custom copyright text
-    # copyright:
-    #     text: "YOUR_COMPANY_NAME"
-    #     url: "COMPANY_URL"
-    #     target: _blank
         
+    ## Social Media Links  
     social:
         - name: github
           icon: fa-github
@@ -109,19 +108,6 @@ params:
         - name: twitter
           icon: fa-twitter
           url: "TWITTER_URL"
-        - name: instagram
-          icon: fa-instagram
-          url: "INSTAGRAM_URL"
-        - name: facebook
-          icon: fa-facebook-square
-          url: "FACEBOOK_URL"
-        - name: linkedin
-          icon: fa-linkedin
-          url: "LINKKEDIN_URL"
-        - name: youtube
-          icon: fa-youtube
-          url: "YOUTUBE_URL"
-
 ```
 
 <br>

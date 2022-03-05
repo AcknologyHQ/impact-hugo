@@ -1,8 +1,10 @@
 (() => {
   // <stdin>
-  AOS.init({
-    delay: 100
-  });
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      delay: 100
+    });
+  }
   var backtotop = document.querySelector("#backtotop");
   backtotop.addEventListener("click", (e) => {
     e.preventDefault();
@@ -21,18 +23,22 @@
       });
     }
   });
-  bulmaCarousel.attach("#carousel-clients", {
-    slidesToScroll: 1,
-    slidesToShow: 6,
-    loop: true,
-    autoplay: true,
-    duration: 2e3,
-    autoplaySpeed: 1e3,
-    infinite: true,
-    navigation: false,
-    pagination: false,
-    navigationKeys: false,
-    timing: "ease-in-out"
-  });
-  hljs.highlightAll();
+  if (typeof bulmaCarousel !== "undefined") {
+    bulmaCarousel.attach("#carousel-clients", {
+      slidesToScroll: 1,
+      slidesToShow: 6,
+      loop: true,
+      autoplay: true,
+      duration: 2e3,
+      autoplaySpeed: 1e3,
+      infinite: true,
+      navigation: false,
+      pagination: false,
+      navigationKeys: false,
+      timing: "ease-in-out"
+    });
+  }
+  if (typeof hljs !== "undefined") {
+    hljs.highlightAll();
+  }
 })();
