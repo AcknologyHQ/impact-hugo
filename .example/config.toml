@@ -1,0 +1,91 @@
+####
+## Sample Config for Impact Theme
+####
+# Example config to place in /path-to/hugo-site/config.toml
+
+baseURL = "http://example.org"
+languageCode = "en-us"
+title = "WEBSITE_TITLE"
+
+theme = "impact"
+
+####
+## Hugo Options
+####
+
+# Disable unwanted features
+disableKinds = [ "RSS", "taxonomy", "term" ]
+disableHugoGeneratorInject = "true"
+
+[minify]
+    minifyOutput = "true"
+
+    [minify.tdewolff.html]
+        keepComments = "true"
+        keepQuotes = "true"
+
+# Enable this to use html in markdown files
+# [markup]
+#     [markup.goldmark.renderer]
+#         unsafe = "true"
+
+####
+## Theme Options
+####
+
+googleAnalytics = "UA-XXXXX-X"
+enableRobotsTXT = "true"
+
+[params]
+    icon = "assets/icon.png"
+
+    # [Optional] Pages in the footer
+    privacyPage = "/privacy/"
+    termsPage = "/terms/"
+
+    # [Optional] Custom last modified title
+    lastModTitle = "Last modified on"
+
+    # [Optional]
+    [params.footer]
+        title = "Impact Theme"
+        subtitle = "A powerful theme for impactful websites"
+
+    # if you want to use custom copyright text
+    # [params.copyright]
+    #     text = "YOUR_COMPANY_NAME"
+    #     url = "COMPANY_URL"
+    #     target = "_blank"
+
+
+
+## Social Media Links  
+[[params.social]]
+    name = "github"
+    icon = "fa-github"
+    url = "GITHUB_URL"
+
+[[params.social]]
+    name = "twitter"
+    icon = "fa-twitter"
+    url = "TWITTER_URL"
+
+[[params.social]]
+    name = "instagram"
+    icon = "fa-instagram"
+    url = "INSTAGRAM_URL"
+
+[[params.social]]
+    name = "facebook"
+    icon = "fa-facebook-square"
+    url = "FACEBOOK_URL"
+
+[[params.social]]
+    name = "linkedin"
+    icon = "fa-linkedin"
+    url = "LINKKEDIN_URL"
+
+[[params.social]]
+    name = "youtube"
+    icon = "fa-youtube"
+    url = "YOUTUBE_URL"
