@@ -32,10 +32,14 @@ disableHugoGeneratorInject = "true"
 ## Theme Options
 ####
 
-googleAnalytics = "G-WKMFCHMWGS"
 enableRobotsTXT = "true"
 
-[params]
+googleAnalytics = 'G-WKMFCHMWGS'
+
+[params]  
+    # [Optional] Google Analytics ID
+    GoogleAnalytics = 'G-WKMFCHMWGS'
+
     icon = "assets/icon.png"
 
     # [Optional] Pages in the footer
