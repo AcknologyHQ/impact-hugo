@@ -5,6 +5,7 @@
 <nav class="breadcrumb is-centered2 has-dot-separator" aria-label="breadcrumbs">
     <ul>
         {{ $breadcrumbs := split $url "/" }}
+        <li {{ if eq 1 (len $breadcrumbs) }} class="is-active" {{ end }}><a href="{{ .Site.BaseURL | relURL }}">home</a></li>
         {{ $Scratch := .Scratch }}
         {{ .Scratch.Set "breadcrumbLink" "/" }}
         {{ range $index, $element := $breadcrumbs }}
