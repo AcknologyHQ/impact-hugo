@@ -5,13 +5,17 @@
 <nav class="breadcrumb is-centered2 has-dot-separator" aria-label="breadcrumbs">
     <ul>
         {{ $breadcrumbs := split $url "/" }}
-        {{ $i := 1 }}
-        <li {{ if eq $i (len $breadcrumbs) }} class="is-active" {{ end }}><a href="{{ .Site.BaseURL | relURL }}">home</a></li>
+        {{ $Scratch := .Scratch }}
+        {{ .Scratch.Set "breadcrumbLink" "/" }}
         {{ range $index, $element := $breadcrumbs }}
-        {{ $i := add $i 1 }}
-        {{ $.Scratch.Add "path" $element }}
-            {{ if ne $element "" }}
-                <li {{ if eq $i (len $breadcrumbs) }} class="is-active" {{ end }}><a href="{{ $.Scratch.Get "path" | relURL }}">{{ . }}</a></li>
+        {{ if ne $element "" }}
+            {{ $Scratch.Add "breadcrumbLink" $element }}
+            {{ $Scratch.Add "breadcrumbLink" "/" }}
+            <li class="{{ if eq $index (sub (len $breadcrumbs) 2) }}is-active{{ end }}">
+                <a href="{{ $Scratch.Get "breadcrumbLink" | relURL }}">
+                    {{ $element }}
+                </a>
+            </li>
             {{ end }}
         {{ end }}
     </ul>
