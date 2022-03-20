@@ -1,6 +1,6 @@
 section1:
   title: "Section 1"
-  show: true
+  show: false
   links:
     - title: "Link 11"
       url: "#"
@@ -13,7 +13,7 @@ section1:
       
 section2:
   title: "Section 2"
-  show: true
+  show: false
   links:
     - title: "Link 21"
       url: "#"
@@ -26,7 +26,7 @@ section2:
       
 section3:
   title: "Section 3"
-  show: true
+  show: false
   links:
     - title: "Link 31"
       url: "#"

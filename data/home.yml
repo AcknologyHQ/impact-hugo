@@ -12,7 +12,7 @@
 # ### top section
 # #######
 top:
-  enable: true
+  enable: false
   bgImg: "https://placekitten.com/800/500"
   bg: "white-75"
   image: "https://placekitten.com/600/400"
@@ -31,7 +31,7 @@ top:
 # ### about section
 # #######
 about:
-  enable: true
+  enable: false
   image: "assets/icon.png"
   title: "About"
   subtitle: "A powerful theme for impactful websites"
@@ -49,7 +49,7 @@ about:
 # #######
 # for icons refer FontAwesome: https://fontawesome.com/search?m=free&s=solid%2Cregular%2Clight%2Cthin%2Cduotone%2Cbrands
 services:
-  enable: true
+  enable: false
   title: "Our Services"
   subtitle: "here are some of the services we provide"
   image: "https://placekitten.com/300/500"
@@ -89,7 +89,7 @@ services:
 # ### contact section
 # #######
 contact:
-  enable: true
+  enable: false
   title: "Reach Us"
   subtitle: "ready to get in touch? Let's get in touch"
   image: "https://placekitten.com/600/500"
@@ -99,7 +99,7 @@ contact:
 # ### clients section
 # #######
 clients:
-  enable: true
+  enable: false
   title: "Our Clients"
   subtitle: "clients subtitle"
   footer: "images from placekitten.com"
@@ -124,7 +124,7 @@ clients:
       image: "https://placekitten.com/300/400"
 
 cta:
-  enable: true
+  enable: false
   title: "CTA Section"
   icon: "fa-puzzle-piece"
   tag: "CTA tag goes here"
